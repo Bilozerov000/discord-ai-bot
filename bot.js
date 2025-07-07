@@ -6,12 +6,16 @@ const fs = require('fs');
 const axios = require('axios');
 const FormData = require('form-data');
 const ffmpeg = require('fluent-ffmpeg');
+const ffmpegStatic = require('ffmpeg-static');
 const prism = require('prism-media');
 const ytdl = require('ytdl-core');
 const { google } = require('googleapis');
 const { exec } = require('child_process');
 const path = require('path');
 const { log } = require('console');
+
+// Set ffmpeg path to use the static binary
+ffmpeg.setFfmpegPath(ffmpegStatic);
 
 let alarms = [];
 
@@ -418,9 +422,13 @@ async function sendAudioToAPI(fileName, userId, connection, channel) {
   formData.append('model', process.env.STT_MODEL);
   formData.append('file', fs.createReadStream(fileName));
 
+  logToConsole(`> STT API Key (first 20 chars): ${process.env.LLM_API ? process.env.LLM_API.substring(0, 20) : 'UNDEFINED'}...`, 'info', 2);
+  logToConsole(`> STT Endpoint: ${process.env.STT_ENDPOINT}`, 'info', 2);
+
   try {
     const response = await axios.post(process.env.STT_ENDPOINT + '/v1/audio/transcriptions', formData, {
       headers: {
+        'Authorization': `Bearer ${process.env.LLM_API}`,
         ...formData.getHeaders(),
       },
     });
@@ -621,6 +629,10 @@ async function sendAudioToAPI(fileName, userId, connection, channel) {
   } catch (error) {
     currentlythinking = false;
     logToConsole(`X Failed to transcribe audio: ${error.message}`, 'error', 1);
+    if (error.response) {
+      logToConsole(`X Response status: ${error.response.status}`, 'error', 1);
+      logToConsole(`X Response data: ${JSON.stringify(error.response.data)}`, 'error', 1);
+    }
     // Restart listening after an error
     restartListening(userId, connection, channel);
   } finally {
@@ -1085,6 +1097,10 @@ async function sendToTTS(text, userid, connection, channel) {
           response_format: "mp3",
           speed: 1.0
         }, {
+          headers: {
+            'Authorization': `Bearer ${process.env.LLM_API}`,
+            'Content-Type': 'application/json'
+          },
           responseType: 'arraybuffer'
         });
 
