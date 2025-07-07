@@ -1,0 +1,48 @@
+(node:91909) Warning: Supplying "ephemeral" for interaction response options is deprecated. Utilize flags instead.
+(Use `node --trace-warnings ...` to show where the warning was created)
+node:events:495
+      throw er; // Unhandled 'error' event
+      ^
+
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/oleksii/Documents/discord-ai-bot/node_modules/@discordjs/rest/dist/index.js:748:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/oleksii/Documents/discord-ai-bot/node_modules/@discordjs/rest/dist/index.js:852:23)
+    at async _REST.request (/home/oleksii/Documents/discord-ai-bot/node_modules/@discordjs/rest/dist/index.js:1293:22)
+    at async ChatInputCommandInteraction.reply (/home/oleksii/Documents/discord-ai-bot/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:200:22)
+    at async Client.<anonymous> (/home/oleksii/Documents/discord-ai-bot/bot.js:125:9)
+Emitted 'error' event on Client instance at:
+    at emitUnhandledRejectionOrErr (node:events:398:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:84:21) {
+  requestBody: {
+    files: [],
+    json: {
+      type: 4,
+      data: {
+        content: 'Joined voice channel.',
+        tts: false,
+        nonce: undefined,
+        enforce_nonce: false,
+        embeds: undefined,
+        components: undefined,
+        username: undefined,
+        avatar_url: undefined,
+        allowed_mentions: undefined,
+        flags: 64,
+        message_reference: undefined,
+        attachments: undefined,
+        sticker_ids: undefined,
+        thread_name: undefined,
+        applied_tags: undefined,
+        poll: undefined
+      }
+    }
+  },
+  rawError: { message: 'Unknown interaction', code: 10062 },
+  code: 10062,
+  status: 404,
+  method: 'POST',
+  url: 'https://discord.com/api/v10/interactions/1391849328833990736/aW50ZXJhY3Rpb246MTM5MTg0OTMyODgzMzk5MDczNjpCU3N1cjNYUEVpR3ZIQXNnQ1lOWU8zQUl0WllObGVlVnhmZXhpdERaNFhTMVRpZDlVOGZaM1JjQnVHWWNTQVV0OW9vT0NUM2lSWHFyY1lLWlJVREY4ZjZjVEVwQllzZUg1UVFUeXVyV0VjRUZwWFJwTmJkMkJUMzgzWWhTelVXaA/callback?with_response=false'
+}
+
+Node.js v18.19.1

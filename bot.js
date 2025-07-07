@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 const { Client, GatewayIntentBits, Intents } = require('discord.js');
-const { joinVoiceChannel, createAudioPlayer, createAudioResource, AudioPlayerStatus, EndBehaviorType } = require('@discordjs/voice');
+const { joinVoiceChannel, createAudioPlayer, createAudioResource, AudioPlayerStatus, EndBehaviorType, VoiceConnectionStatus, entersState } = require('@discordjs/voice');
 const fs = require('fs');
 const axios = require('axios');
 const FormData = require('form-data');
@@ -117,6 +117,22 @@ client.on('interactionCreate', async interaction => {
           adapterCreator: interaction.guild.voiceAdapterCreator,
           selfDeaf: false,
         });
+        
+        // Handle voice connection errors
+        connection.on('error', (error) => {
+          logToConsole(`Voice connection error: ${error.message}`, 'error', 1);
+        });
+        
+        // Wait for connection to be ready
+        try {
+          await entersState(connection, VoiceConnectionStatus.Ready, 20_000);
+        } catch (error) {
+          logToConsole(`Failed to establish voice connection: ${error.message}`, 'error', 1);
+          connection.destroy();
+          await interaction.followUp({ content: 'Failed to join voice channel. Please try again.', ephemeral: true });
+          return;
+        }
+        
         if (transcribemode) {
           sendToTTS('Transcription mode is enabled for this conversation. Once you type the leave command, a transcription of the conversation will be sent in the channel.', interaction.user.id, connection, interaction.member.voice.channel);
         }
@@ -464,8 +480,14 @@ async function sendAudioToAPI(fileName, userId, connection, channel) {
 
     // Check if the transcription includes the bot's name
     if (botnames.some(name => {
-      const regex = new RegExp(`\\b${name}\\b`, 'i');
-      return regex.test(transcription) || allowwithouttrigger;
+      const trimmedName = name.trim();
+      // Use simple includes for Russian text since word boundaries don't work well with Cyrillic
+      const simpleMatch = transcription.toLowerCase().includes(trimmedName.toLowerCase());
+      // Also try regex match as fallback
+      const regex = new RegExp(`\\b${trimmedName}\\b`, 'i');
+      const regexMatch = regex.test(transcription);
+      logToConsole(`> Checking trigger "${trimmedName}" against "${transcription}": simple=${simpleMatch}, regex=${regexMatch}`, 'info', 2);
+      return simpleMatch || regexMatch || allowwithouttrigger;
     })) {
         // Ignore if the string is a single word
         if (transcription.split(' ').length <= 1) {
@@ -477,7 +499,13 @@ async function sendAudioToAPI(fileName, userId, connection, channel) {
 
         // Remove the first occurrence of the bot's name from the transcription
         for (const name of botnames) {
-          transcription = transcription.replace(new RegExp(`\\b${name}\\b`, 'i'), '').trim();
+          const trimmedName = name.trim();
+          // Try regex first, then simple replacement
+          transcription = transcription.replace(new RegExp(`\\b${trimmedName}\\b`, 'i'), '');
+          if (transcription.toLowerCase().includes(trimmedName.toLowerCase())) {
+            transcription = transcription.toLowerCase().replace(trimmedName.toLowerCase(), '');
+          }
+          transcription = transcription.trim();
         }
 
         // Check if transcription is a command
@@ -1062,8 +1090,8 @@ async function sendToTTS(text, userid, connection, channel) {
 
   for (const chunk of chunks) {
     try {
-      if(process.env.TTS_TYPE === "speecht5"){
-        logToConsole('> Using SpeechT5 TTS', 'info', 2);
+      if(process.env.TTS_TYPE === "vits" || process.env.TTS_TYPE === "speecht5"){
+        logToConsole('> Using upgraded VITS TTS', 'info', 2);
         const response = await axios.post(process.env.TTS_ENDPOINT + '/synthesize', {
           text: chunk,
         }, {

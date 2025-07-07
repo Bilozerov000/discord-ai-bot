@@ -1,0 +1,24 @@
+ * Tip: There are .env files present. Install python-dotenv to use them.
+Loading SpeechT5 models for Russian with memory optimization...
+Using device: cuda
+GPU memory allocated after loading: 0.60 GB
+SpeechT5 models loaded successfully with memory optimization
+Starting optimized TTS server on port 5001...
+ * Serving Flask app 'local_tts_server_optimized'
+ * Debug mode: off
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.0.246:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 22:09:00] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 22:09:00] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 22:09:00] "GET /memory_status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 22:09:01] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 22:09:01] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 22:09:01] "GET /memory_status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 22:09:14] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 22:10:50] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 22:11:32] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 22:18:47] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 22:21:15] "GET /health HTTP/1.1" 200 -
