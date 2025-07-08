@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """
-Upgraded Text-to-Speech server using VITS models
-Much better Russian voice quality than SpeechT5
+Text-to-Speech server using VITS models for Russian
 """
 
 from flask import Flask, request, jsonify, send_file
@@ -23,11 +22,12 @@ app = Flask(__name__)
 logging.basicConfig(level=logging.INFO)
 
 # Load VITS model for Russian
-print("Loading VITS Russian model for high-quality speech synthesis...")
-model_name = "facebook/mms-tts-rus"  # High-quality Russian TTS model
+print("Loading Russian TTS model...")
+model_name = "facebook/mms-tts-rus"  # Using Facebook MMS for Russian
 tokenizer = VitsTokenizer.from_pretrained(model_name)
 model = VitsModel.from_pretrained(model_name)
 
+# Load female speaker embeddings (soft female voice)
 if torch.cuda.is_available():
     model = model.cuda()
     print("Using CUDA for TTS acceleration")
@@ -87,13 +87,13 @@ def synthesize():
         text = preprocess_russian_text(text)
         print(f"Synthesizing Russian text: {text}")
         
-        # Tokenize text
+        # Tokenize text with VITS
         inputs = tokenizer(text, return_tensors="pt")
         
         if torch.cuda.is_available():
             inputs = {k: v.cuda() for k, v in inputs.items()}
         
-        # Generate speech
+        # Generate speech with VITS
         with torch.no_grad():
             waveform = model(**inputs).waveform
         
@@ -134,5 +134,5 @@ def health():
     })
 
 if __name__ == '__main__':
-    print("Starting upgraded Russian TTS server on http://localhost:5001")
+    print("Starting Russian TTS server on http://localhost:5001")
     app.run(host='0.0.0.0', port=5001, debug=False)

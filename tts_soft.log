@@ -1,0 +1,20 @@
+nohup: ignoring input
+Loading enhanced VITS Russian model for soft female voice...
+Using CUDA for TTS acceleration
+Enhanced VITS Russian TTS model loaded successfully
+Starting enhanced Russian TTS server with soft female voice on http://localhost:5001
+ * Serving Flask app 'soft_female_tts_server'
+ * Debug mode: off
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.0.246:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 23:12:41] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 23:12:53] "[33mPOST /tts HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 23:13:24] "POST /synthesize HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 23:13:58] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 23:15:39] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 23:20:51] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 23:21:29] "POST /synthesize HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 23:21:59] "GET /health HTTP/1.1" 200 -

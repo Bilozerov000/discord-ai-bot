@@ -1,0 +1,162 @@
+nohup: ignoring input
+Loading Whisper medium model for Russian recognition...
+Whisper medium model loaded successfully
+Starting local Whisper STT server on http://localhost:5000
+ * Serving Flask app 'local_stt_server'
+ * Debug mode: off
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.246:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 23:41:21] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 23:44:49] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 23:45:09] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 23:45:13] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 23:45:19] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 23:48:00] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 23:48:11] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 23:48:49] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 23:49:05] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 23:49:09] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 23:49:18] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 23:49:22] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 23:49:32] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 23:50:26] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 23:50:28] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 23:50:33] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 23:52:06] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 23:52:09] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 23:52:22] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 23:52:31] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 23:52:51] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 23:53:19] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 23:53:47] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Jul/2025 23:54:24] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 13:20:57] "GET /health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 13:23:57] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 13:25:02] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 13:26:12] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 13:27:41] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 13:30:42] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 13:31:12] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 13:33:44] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 13:34:21] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:44:12] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:44:15] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:44:26] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:44:43] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:44:53] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+ERROR:root:Transcription error: Key and Value must have the same sequence length
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:45:03] "[35m[1mPOST /v1/audio/transcriptions HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:45:03] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+ERROR:root:Transcription error: Key and Value must have the same sequence length
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:45:21] "[35m[1mPOST /v1/audio/transcriptions HTTP/1.1[0m" 500 -
+ERROR:root:Transcription error: Key and Value must have the same sequence length
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:45:21] "[35m[1mPOST /v1/audio/transcriptions HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:45:38] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:45:51] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:46:03] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:46:17] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:46:24] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:46:42] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:46:46] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:46:47] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:46:49] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:46:52] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:46:55] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:47:08] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:47:19] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:47:34] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:47:55] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:47:57] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:47:58] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:48:04] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:48:20] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:48:39] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:48:53] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:49:22] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:50:10] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:50:12] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:50:22] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:50:26] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:50:30] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:50:34] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:50:48] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:51:30] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:51:35] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:51:36] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:51:38] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:51:42] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:51:45] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:52:13] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:52:17] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:52:51] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:53:18] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:53:30] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:53:31] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:53:40] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:53:48] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:53:51] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:53:53] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:53:55] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:53:58] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:54:00] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:54:11] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:54:26] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:54:28] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:54:46] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:54:48] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:55:37] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:56:33] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:56:37] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:56:39] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:56:41] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:57:46] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:58:30] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 15:59:52] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 16:00:39] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 16:00:42] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 16:00:46] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 16:00:53] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 16:00:56] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 16:00:57] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 16:01:07] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 16:01:10] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 16:01:13] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 16:01:21] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 16:01:39] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 16:02:13] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 16:02:22] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 16:02:23] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 16:02:25] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 16:02:30] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 16:02:36] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 16:02:40] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 16:02:50] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 16:03:01] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 16:03:12] "POST /v1/audio/transcriptions HTTP/1.1" 200 -
+ERROR:root:Transcription error: The size of tensor a (143) must match the size of tensor b (13) at non-singleton dimension 3
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 16:03:21] "[35m[1mPOST /v1/audio/transcriptions HTTP/1.1[0m" 500 -
+ERROR:root:Transcription error: 'NoneType' object is not subscriptable
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 16:03:21] "[35m[1mPOST /v1/audio/transcriptions HTTP/1.1[0m" 500 -
+ERROR:root:Transcription error: 'NoneType' object is not subscriptable
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 16:03:31] "[35m[1mPOST /v1/audio/transcriptions HTTP/1.1[0m" 500 -
+ERROR:root:Transcription error: 'NoneType' object is not subscriptable
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 16:03:32] "[35m[1mPOST /v1/audio/transcriptions HTTP/1.1[0m" 500 -
+ERROR:root:Transcription error: 'NoneType' object is not subscriptable
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 16:03:35] "[35m[1mPOST /v1/audio/transcriptions HTTP/1.1[0m" 500 -
+ERROR:root:Transcription error: 'NoneType' object is not subscriptable
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 16:03:44] "[35m[1mPOST /v1/audio/transcriptions HTTP/1.1[0m" 500 -
+ERROR:root:Transcription error: 'NoneType' object is not subscriptable
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 16:03:47] "[35m[1mPOST /v1/audio/transcriptions HTTP/1.1[0m" 500 -
+ERROR:root:Transcription error: 'NoneType' object is not subscriptable
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 16:04:01] "[35m[1mPOST /v1/audio/transcriptions HTTP/1.1[0m" 500 -
+ERROR:root:Transcription error: 'NoneType' object is not subscriptable
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 16:04:01] "[35m[1mPOST /v1/audio/transcriptions HTTP/1.1[0m" 500 -
+ERROR:root:Transcription error: 'NoneType' object is not subscriptable
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 16:04:04] "[35m[1mPOST /v1/audio/transcriptions HTTP/1.1[0m" 500 -
+ERROR:root:Transcription error: 'NoneType' object is not subscriptable
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 16:04:12] "[35m[1mPOST /v1/audio/transcriptions HTTP/1.1[0m" 500 -
+ERROR:root:Transcription error: 'NoneType' object is not subscriptable
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2025 16:04:13] "[35m[1mPOST /v1/audio/transcriptions HTTP/1.1[0m" 500 -

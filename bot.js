@@ -715,10 +715,16 @@ async function sendToLLM(transcription, userId, connection, channel) {
       }
     });
     
-    // Chat completion without streaming
+    // Chat completion with enhanced parameters
     client.post('/chat/completions', {
       model: process.env.LLM,
       messages: messages,
+      temperature: parseFloat(process.env.LLM_TEMPERATURE || 0.7),
+      top_p: parseFloat(process.env.LLM_TOP_P || 0.9),
+      top_k: parseInt(process.env.LLM_TOP_K || 40),
+      repeat_penalty: parseFloat(process.env.LLM_REPEAT_PENALTY || 1.1),
+      max_tokens: parseInt(process.env.LLM_MAX_TOKENS || 150),
+      stop: ["Human:", "User:", "Question:"],
     })
     .then((response) => {
       const llmresponse = response.data.choices[0].message.content;
@@ -823,10 +829,16 @@ async function sendTextToLLM(message) {
       }
     });
 
-    // Chat completion without streaming
+    // Chat completion with enhanced parameters for text
     const response = await client.post('/chat/completions', {
       model: process.env.LLM,
       messages: messages,
+      temperature: parseFloat(process.env.LLM_TEMPERATURE || 0.7),
+      top_p: parseFloat(process.env.LLM_TOP_P || 0.9),
+      top_k: parseInt(process.env.LLM_TOP_K || 40),
+      repeat_penalty: parseFloat(process.env.LLM_REPEAT_PENALTY || 1.1),
+      max_tokens: parseInt(process.env.LLM_MAX_TOKENS || 150),
+      stop: ["Human:", "User:", "Question:"],
     });
 
     const llmresponse = response.data.choices[0].message.content;
