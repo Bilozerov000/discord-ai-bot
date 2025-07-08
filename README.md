@@ -6,17 +6,12 @@ Additionally, you can just use the bot in text channels.
 
 ## Features
 - __Conversation:__ Engage in a conversation with the bot using voice or text input.
-- __Music Playback:__ Play music from YouTube in the voice channel. Say `play [query] on youtube` or `play [query] song` to play a song. You can also use the `>play` command.
-- __Timers:__ Set a timer by saying `set a timer for [time]` or `set an alarm for [time]`. The bot will notify you when the timer is up.
-- __Internet search:__ Ask the bot to search the internet for you by saying `search [query] on internet` or `search on internet for [query]`. The bot will respond using the web.
-- __Vision:__ Send an image mentioning the bot, and it will react to it in voice chat.
 
 ## Prerequisites
 
 - Node.js and npm installed
 - A Discord Bot Token
-- Access to OpenAI compatible APIs for STT (Speech to Text), LLM, and TTS services (for fully local, checkout `openedai-whisper`, `ollama` and `openedai-speech`)
-- If you wish to use timer and alarms, you need a `alarm.mp3` and `timer.mp3` files in the `sounds` folder.
+- Fully local, checkout `openedai-whisper`, `ollama` and `openedai-speech`)
 
 ## Installation
 
@@ -63,10 +58,6 @@ https://discord.com/oauth2/authorize?client_id=REPLACEME&permissions=96422051641
 - `/join free`: Similar to `>join`, but will respond to everything without using trigger words. Best for solo usage.
 - `/join silent`: Similar to `>join`, but no confirmation sound will play when trigger is detected/llm responded.
 - `/join transcribe`: Similar to `>join`, but will save the transcriptions to a file and send it once you use the `>leave` command.
-- `/play [song name or URL]`: Play a song from YouTube using either its name (search via API) or direct URL. Please note that the search function requires a valid API key. You may also say `play [query] on youtube` or `play [query] song` in voice chat.
-- `/search [query]`: Use perplexity LLM search to find the best answer to your query. You may also say `search [query] on internet` or `search on internet for [query]` in voice chat.
-- `/reminder [timestamp] [message]`: Set a reminder for a specific time using Discord timestamps.
-- `/reset`: Reset the LLM chat history. You may also say `reset chat history` in voice chat.
 - `/leave`: Command for the bot to leave the voice channel. You may also say `leave voice chat` in voice chat.
 - `/help`: Display the list of available commands.
 
